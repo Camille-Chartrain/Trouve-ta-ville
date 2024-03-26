@@ -40,7 +40,9 @@ const Search = ({ setSearchCity }) => {
                 </button>
             </form>
             <section className="formResult">
-                <h3>Résultats</h3>
+                <div className="resultats">
+                    <h3>Résultats</h3>
+                </div>
                 <button type="submit">Changer le format</button>
             </section>
 

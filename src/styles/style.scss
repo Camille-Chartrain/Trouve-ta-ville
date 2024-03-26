@@ -47,7 +47,8 @@ form{
     margin-top: 10px;
     
 
-    & h3{
+    & .resultats{
+        display: flex;
         flex: 2;
         height: 50px;
         border: 1px solid black;
@@ -56,6 +57,11 @@ form{
         box-sizing: content-box;
         padding-top:1px;
         padding-bottom:1px;
+        
+        & h3{
+            margin-top: auto;
+            margin-bottom: auto;
+        }
     }
     & button{
         flex: 1;
