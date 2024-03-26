@@ -25,10 +25,18 @@ form{
     & input{
         flex: 2;
         height: 50px;
+        border-radius: 5px;
+        margin-right: 10px;
     }
     & .searchButton{
         flex: 1;
         height: 50px;
+        border-radius: 5px;
+        box-sizing: content-box;
+        &:hover{
+            background-color: grey;
+            color: white;
+        }
     }
 }
 
@@ -37,16 +45,27 @@ form{
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    
 
     & h3{
         flex: 2;
         height: 50px;
         border: 1px solid black;
-    
+        margin-right: 10px;
+        border-radius: 5px;
+        box-sizing: content-box;
+        padding-top:1px;
+        padding-bottom:1px;
     }
     & button{
         flex: 1;
         height: 50px;
+        box-sizing: content-box;
+        border-radius: 5px;
+        &:hover{
+            background-color: grey;
+            color: white;
+        }
     }
 }
 
@@ -54,5 +73,10 @@ form{
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.13)
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 5px;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
