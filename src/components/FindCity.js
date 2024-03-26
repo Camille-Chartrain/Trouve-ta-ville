@@ -21,8 +21,8 @@ const FindCity = () => {
     console.log('searchCity: ' + searchCity)
 
     // useEffect(() => {
-    //     console.log('useeffect handleSearch appelé');
-    //     handleSearch();
+    //     console.log('useeffect getCity appelé');
+    //     getCity()
     // }, [])
 
     return (
