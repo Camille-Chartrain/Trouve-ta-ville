@@ -14,14 +14,16 @@ const maVille = [{
 console.log(maVille[0].nom);
 
 const FindCity = () => {
-    // let [searchTitle, setSearchTitle] = useState("");
-    // console.log(`searchTitle = ${searchTitle}`)
-    console.log(maVille);
+    let [searchCity, setSearchCity] = useState("");
+    console.log('searchCity: ' + searchCity)
+
+
 
 
     return (
         <>
-            <Search />
+            <Search
+                setSearchCity={setSearchCity} />
             <List
                 data={maVille}
             />
