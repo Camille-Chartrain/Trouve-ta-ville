@@ -1,0 +1,58 @@
+body {
+	font-family: 'Ysabeau', sans-serif;
+	line-height: 1.5;
+	color: #393232;
+    margin: 20px;
+
+    & h1 {
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+        margin: 1.2em;  
+    }
+    & h2 {
+            font-size: 1.5rem;
+        }
+}
+
+form{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+
+    & input{
+        flex: 2;
+        height: 50px;
+    }
+    & .searchButton{
+        flex: 1;
+        height: 50px;
+    }
+}
+
+.formResult{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    & h3{
+        flex: 2;
+        height: 50px;
+        border: 1px solid black;
+    
+    }
+    & button{
+        flex: 1;
+        height: 50px;
+    }
+}
+
+.detailCity{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.13)
+}
