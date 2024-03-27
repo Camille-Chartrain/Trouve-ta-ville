@@ -14,8 +14,6 @@ import List from "./List";
 // }]
 // console.log(maVille[0].nom);
 
-
-
 const FindCity = () => {
     let [searchCity, setSearchCity] = useState("");
     console.log('searchCity: ' + searchCity)
@@ -27,6 +25,7 @@ const FindCity = () => {
 
     return (
         <>
+            <h1>Recherche par nom de commune</h1>
             <Search
                 setSearchCity={setSearchCity} />
             <List

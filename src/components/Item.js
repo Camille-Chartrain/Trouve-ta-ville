@@ -1,8 +1,8 @@
-const Item = ({ ville, CP, pop }) => {
+const Item = ({ ville, CP, pop, departement }) => {
 
     return (
         <section className="detailCity">
-            <p>{ville}</p>
+            <p>{ville} - {departement}</p>
             <p >Code Postal: {CP}</p>
             <p >population: {pop}</p>
         </section>

@@ -26,16 +26,13 @@ const Search = ({ setSearchCity }) => {
 
     return (
         <>
-            <h1>Recherche par nom de commune</h1>
             <h2>Nom de la commune</h2>
             <form onClick={getCity}>
-                <label htmlFor="sort-form__search"></label>
+                <label htmlFor=""></label>
                 <input
                     type="text"
-                    id="sort-form__search"
                     placeholder="Troyes, Bar-le-duc, Paris, ..." />
                 <button
-
                     type="submit" className="searchButton">Lancer la recherche
                 </button>
             </form>
