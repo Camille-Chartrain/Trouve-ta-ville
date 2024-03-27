@@ -1,21 +1,26 @@
 
 
-const Search = ({ setSearchCity }) => {
+const Search = ({ setSearchCity, setLoading, loading, setFormat, format }) => {
 
     async function getCity(event) {
-
-        console.log('getCity lancé');
-        //console.log(event.target.form[0].value);
-        const city = event.target.form[0].value;
         event.preventDefault()
+        console.log('getCity lancé');
+        // Créer un objet FormData à partir du formulaire soumis
+        const formData = new FormData(event.target);
+
+        // Récupérer la valeur du champ de saisie "city" à partir de l'objet FormData
+        const city = formData.get('city');
+
 
         if (city != '') {
+            setLoading(true)
 
             try {
                 const response = await fetch(`https://geo.api.gouv.fr/communes?nom=${city}`);
                 const dataCity = await response.json();
                 console.log("ma response API", { dataCity });
                 setSearchCity(dataCity);
+                setLoading(false)
             }
             catch (error) {
                 console.error(error);
@@ -24,14 +29,24 @@ const Search = ({ setSearchCity }) => {
         }
     };
 
+    function handleClick() {
+        console.log(format);
+        if (!format)
+            setFormat(true)
+        else if (format) setFormat(false)
+        console.log(format);
+    }
+
     return (
         <>
             <h2>Nom de la commune</h2>
-            <form onClick={getCity}>
+            <form onSubmit={getCity}>
                 <label htmlFor=""></label>
                 <input
+                    name="city"
                     type="text"
-                    placeholder="Troyes, Bar-le-duc, Paris, ..." />
+                    placeholder="Troyes, Bar-le-duc, Paris, ..."
+                />
                 <button
                     type="submit" className="searchButton">Lancer la recherche
                 </button>
@@ -40,7 +55,10 @@ const Search = ({ setSearchCity }) => {
                 <div className="resultats">
                     <h3>Résultats</h3>
                 </div>
-                <button type="submit">Changer le format</button>
+                <button onClick={handleClick} type="submit">Changer le format</button>
+            </section>
+            <section>
+                {loading && <p>En chargement ...</p>}
             </section>
 
         </>
