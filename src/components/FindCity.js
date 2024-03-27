@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Search from "./Search";
 import List from "./List";
 import ville2 from "../public/ville2.png";
+import chateau from "../public/chateau.png"
 
 
 const FindCity = () => {
@@ -20,7 +21,8 @@ const FindCity = () => {
                 </nav>
             </section>
             <nav>
-                <h2>Recherche par nom de commune</h2>
+                <h2>Recherche par <span className="buttonChoice" >nom de commune </span><span className="buttonChoice" >département</span></h2>
+
             </nav>
             <Search
                 setSearchCity={setSearchCity}
