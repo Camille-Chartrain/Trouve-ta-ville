@@ -1,15 +1,23 @@
 body {
-	font-family: 'Ysabeau', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	line-height: 1.5;
 	color: #201142;
-    margin: 20px;
-    background-color: #a087fc9d;
+    margin:10px 20px 20px 20px;
+    // background-color: rgba(159, 185, 241, 0.822);
+    // background-color: rgba(152, 179, 238, 0.829);
+    // background-color: rgba(161, 187, 243, 0.712);
+
+    background-color: rgba(140, 165, 248, 0.671);
+    // background-color: rgba(144, 171, 228, 0.733);
+    
+    
 
     & h1 {
         font-size: 2rem;
-        text-align: center;
-        font-weight: 600;
-        line-height: 1.25;
+        font-weight: 500;
+        line-height: 1,5;
+        color: #201142;
+        display: inline;
     }
     & h2 {
             font-size: 1.5rem;
@@ -20,22 +28,15 @@ body {
 #titre{
     display: flex;
     padding-bottom: 10px;
-    margin-bottom: 30px;
-
+    margin-bottom: 20px;
     border-bottom: solid 3px#201142;
-    // ; rgb(82, 96, 143);
-    
-
     & img{
         margin: auto 0 0 0;
         width: 150px;
         height: 150px;
     }
-
-    & h1{
-        margin: 100 50 auto 50;
-        color: #201142;
-        // #240c5c;
+    & .titre{
+        margin: 100  auto auto 10%;
     }
 }
 
@@ -49,16 +50,38 @@ form{
         height: 50px;
         border-radius: 5px;
         margin-right: 10px;
+        padding-left: 5px;
+        border: none;
+        box-sizing: border-box;
+        outline: none;   
+        background-color: white;
+        & internal-autofill-selected {
+            appearance: menulist-button;
+            background-image: none !important;
+            background-color: light-dark(rgb(248, 248, 248), rgba(255, 255, 255, 0.4)) !important;
+            color: fieldtext !important;
+        }
+        &:focus{
+            box-shadow: 0px 0px 3px  #201142; 
+        }
+        &:active{background-color: white;}
     }
     & .searchButton{
         flex: 1;
         height: 50px;
         border-radius: 5px;
-        box-sizing: content-box;
+        box-sizing: border-box;
+        border: none;
+        background-color: rgb(82, 96, 143);
+        color: white;
+
         &:hover{
-            background-color: rgb(82, 96, 143);
+            background-color: rgb(61, 74, 114);
             color: white;
-        }
+    }
+        &:active{
+            box-shadow: 0px 0px 2px  #201142; 
+    }
     }
 }
 
@@ -72,9 +95,8 @@ form{
         display: flex;
         flex: 3;
         height: 50px;
-        border: 1px solid black;
         border-radius: 5px 0px 0px 5px ;
-        box-sizing: content-box;
+        box-sizing: border-box;
         padding-top:1px;
         padding-bottom:1px;
         background-color: rgb(82, 96, 143);
@@ -88,22 +110,26 @@ form{
     }
     & button{
         flex: 1;
-        height: 50px;
-        box-sizing: content-box;
+        // height: 50px;
+        box-sizing: border-box;
         border-radius: 0px 5px 5px 0px;
-        background-color: rgb(89, 88, 112);
+        background-color:  rgb(61, 74, 114);
         color: white;
-        border: 1px solid black;
+        border: none;
+
         &:hover{
-            background-color: #201142;
+            background-color: rgb(63, 61, 88);
             color: white;
+        }
+        &:active{
+            box-shadow: 0px 0px 3px  #201142; 
         }
     }
 }
 
 .detailCity{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 5fr 5fr 3fr;
     margin-top: 10px;
     border: 1px solid rgba(0, 0, 0, 0.13);
     border-radius: 5px;
@@ -114,24 +140,34 @@ form{
     background-color: white;
 
     &>:nth-child(2) {
-        text-align: center;
+        text-align: left;
     }
 
     &>:nth-child(3) {
-        text-align: right;
+        text-align: left;
+    }
+    & .ville{
+        font-weight: 600;
     }
 }
 .buttonChoice{
-    font-size: 1.10rem;
-    padding: 7px;
-    background-color: white;
-    border-radius: 5px ;
-    border: solid 3px rgb(82, 96, 143);
+    font-size: 1rem;
+    padding:  7px 20px;
+    background-color:rgb(107, 123, 173);
+    color: white;
+    border-radius: 10px ;
     box-sizing: content-box;
-    margin-right: 10px;
+    margin-left: 20px;
     &:hover{
         background-color: rgb(82, 96, 143);
         color: white;
-        border: solid 3px #201142;
     }
+    &:active{
+        box-shadow: 0px 0px 1px  #201142; 
+    }
+}
+
+#titreRecherche{
+    margin-top: 40px;
+    font-size: 1.2rem;
 }

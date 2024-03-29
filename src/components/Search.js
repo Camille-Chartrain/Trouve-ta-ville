@@ -1,6 +1,8 @@
+import { useState } from "react";
 
+const Search = ({ setSearchCity, setFormat, format }) => {
 
-const Search = ({ setSearchCity, setLoading, loading, setFormat, format }) => {
+    let [loading, setLoading] = useState(false);
 
     async function getCity(event) {
         event.preventDefault()
@@ -39,9 +41,9 @@ const Search = ({ setSearchCity, setLoading, loading, setFormat, format }) => {
 
     return (
         <>
-            <h2>Nom de la commune</h2>
+            <h2 id="titreRecherche">Nom de la commune / n° de département:</h2>
             <form onSubmit={getCity}>
-                <label htmlFor=""></label>
+                <label htmlFor="Nom de la commune"></label>
                 <input
                     name="city"
                     type="text"
