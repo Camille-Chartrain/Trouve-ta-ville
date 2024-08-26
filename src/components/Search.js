@@ -43,7 +43,9 @@ const Search = ({ setSearchCity, setFormat, format }) => {
         <>
             <h2 id="titreRecherche">Nom de la commune / n° de département:</h2>
             <form onSubmit={getCity}>
-                <label htmlFor="Nom de la commune"></label>
+                {/* not used
+								<label htmlFor="Nom de la commune"></label>
+								*/}
                 <input
                     name="city"
                     type="text"
