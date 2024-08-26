@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Search from "./Search";
 import List from "./List";
-import ville2 from "../public/ville2-removebg.png";
-import ville1 from "../public/ville_mobile.png";
+import ville2 from "../public/ville2-removebg.webp";
+import ville1 from "../public/ville_mobile.webp";
 
 
 const FindCity = () => {
