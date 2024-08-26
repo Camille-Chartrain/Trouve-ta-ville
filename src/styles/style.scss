@@ -1,15 +1,14 @@
+@use './mixin';
+
 body {
 	font-family: 'Rubik', sans-serif;
 	line-height: 1.5;
 	color: #201142;
     margin:10px 20px 20px 20px;
-    // background-color: rgba(159, 185, 241, 0.822);
-    // background-color: rgba(152, 179, 238, 0.829);
-    // background-color: rgba(161, 187, 243, 0.712);
-
     background-color: rgba(140, 165, 248, 0.671);
-    // background-color: rgba(144, 171, 228, 0.733);
-    
+    display: flex;
+    justify-content: center;
+    width: 100% ;
     
 
     & h1 {
@@ -32,8 +31,18 @@ body {
     border-bottom: solid 3px#201142;
     & img{
         margin: auto 0 0 0;
-        width: 150px;
-        height: 150px;
+        }
+    .img_mobile{  
+        @include mixin.medium{
+            display:none;
+        }
+    }
+    .img_desktop{  
+        display: none;
+
+        @include mixin.medium{
+            display:block;
+        }    
     }
     & .titre{
         margin: 100  auto auto 10%;
@@ -78,10 +87,10 @@ form{
         &:hover{
             background-color: rgb(61, 74, 114);
             color: white;
-    }
+        }
         &:active{
             box-shadow: 0px 0px 2px  #201142; 
-    }
+        }
     }
 }
 
