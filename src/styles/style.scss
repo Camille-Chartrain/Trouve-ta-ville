@@ -1,5 +1,13 @@
 @use './mixin';
 
+html {
+	font-size: 16px;
+}
+
+html * {
+	font-size: 1rem;
+}
+
 body {
 		font-family: 'Rubik', sans-serif;
 		line-height: 1.5;
@@ -8,9 +16,6 @@ body {
     background-color: rgba(140, 165, 248, 0.671);
     display: flex;
     justify-content: center;
-    /*
-		width: 100% ;
-		*/
 
     & #root {
 				width: 800px;

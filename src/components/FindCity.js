@@ -14,8 +14,8 @@ const FindCity = () => {
     return (
         <>
             <nav id="titre">
-                <img className="img_mobile" src={ville1} />
-                <img className="img_desktop" src={ville2} />
+                <img className="img_mobile"  src={ville1} alt="logo représentant une ville moderne"/>
+                <img className="img_desktop" src={ville2} alt="logo représentant une ville moderne"/>
 
                 <h1 className="titre">Trouve ta ville</h1>
 
